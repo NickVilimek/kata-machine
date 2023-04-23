@@ -1,6 +1,14 @@
+type LNode<T> = {
+    val?: T;
+    next?: LNode<T>;
+    prev?: LNode<T>;
+}
+
 export default class DoublyLinkedList<T> {
     public length: number;
 
+    private head?: LNode<T>;
+    private tail?: LNode<T>;
     
 
     constructor() {
